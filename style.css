@@ -1,0 +1,15 @@
+.adnsu_link{
+    font-size: 2rem;
+    color: #1a265c;
+    font-weight: 700;
+}
+.nav_div{
+    margin-left: 10rem;
+}
+.nav_ul{
+    font-size: 1.2rem;
+    gap: 2rem;
+}
+.carousel_img{
+    width: 40rem;
+}
