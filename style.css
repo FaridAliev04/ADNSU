@@ -13,3 +13,11 @@
 .carousel_img{
     width: 40rem;
 }
+.carousel_img-center{
+    width: 30rem;
+    margin: 0 auto;
+}
+.next{
+    width: 10rem;
+    margin: 0 auto;
+}
