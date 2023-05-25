@@ -14,10 +14,49 @@
     width: 40rem;
 }
 .carousel_img-center{
-    width: 30rem;
+    width: 50rem;
     margin: 0 auto;
 }
-.next{
-    width: 10rem;
+.carousel_main-div{
+    width: 50rem;
     margin: 0 auto;
+    margin-top: 5rem;
+}
+.none_information{
+    width: 20rem;
+    background-color: #1a265c;
+    color: white;
+    padding: 15px;
+    position: relative; 
+    transition: 1s; 
+}
+.information_close{
+    transform: translateX(-360px);
+}
+.information_open{
+    transform: translateX(0px);
+}
+.informaton-btn_1{
+    width: 20rem;
+    padding: 1rem;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+}
+.information_text{
+    margin-top: 20px;
+}
+.close_information{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background-color: #1a265c;
+    color: white;
+    font-weight: 900;
+}
+.information{
+    width: 80rem;
+    margin: 0 auto;
+    margin-top: 5rem;
 }
