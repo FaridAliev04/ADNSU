@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .adnsu_link{
     font-size: 2rem;
     color: #1a265c;
@@ -22,6 +25,7 @@
     margin: 0 auto;
     margin-top: 5rem;
 }
+
 .none_information{
     width: 20rem;
     background-color: #1a265c;
@@ -31,7 +35,7 @@
     transition: 1s; 
 }
 .information_close{
-    transform: translateX(-360px);
+    transform: translateX(-1360px);
 }
 .information_open{
     transform: translateX(0px);
@@ -58,5 +62,39 @@
 .information{
     width: 80rem;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 5rem; */
+}
+.flags{
+    display: grid;
+    gap: 1rem;
+    grid-row: 5rem 5rem;
+    transition: 1s;
+    z-index: 999999;
+}
+.flag{
+    width: 9.7rem;
+}
+.info_button{
+    width: 80rem;
+    margin: 0 auto;
     margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.country_information{
+    width: 20rem;
+    background-color: #1a265c;
+    
+    transition: 1s;
+}
+.country_information-rotate_right{
+    transform: translateX(1360px);
+}
+.country_information-rotate{
+    transform: translateX(0px); 
+}
+.flag_rotate{
+    transform: translateX(480px); ;
 }
