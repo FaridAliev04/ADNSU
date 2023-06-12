@@ -1,6 +1,6 @@
-body{
+/* body{
     overflow-x: hidden;
-}
+} */
 .adnsu_link{
     font-size: 2rem;
     color: #1a265c;
@@ -98,3 +98,10 @@ body{
 .flag_rotate{
     transform: translateX(480px); ;
 }
+.information{
+    overflow-x: hidden;
+}
+.student_info{
+    display: flex;
+}
+

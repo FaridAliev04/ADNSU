@@ -1,0 +1,21 @@
+$display-flex:flex;
+$genal-font:17px;
+
+.student_info{
+    display: $display-flex;
+}
+.lorem{
+    font-size: $genal-font;
+}
+
+@function divide($a,$b){
+    $resut:$a/$b
+}
+
+@mixin studentinfo{
+    // font-size: divide(4,4)*1rem;
+    color: gray;
+}
+.student_info{
+    @include studentinfo
+}

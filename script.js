@@ -38,36 +38,54 @@ const countBtnFunc=function(){
 countBtn.addEventListener("click",countBtnFunc)
 
 
+const studendBox=document.querySelector(".box")
+const form =document.querySelector(".form")
+const search=document.querySelector(".search_input")
+const formBtn=document.querySelector(".form-btn")
+
+form.addEventListener("submit",function(e){
+    e.preventDefault()
+})
+
+
+
+const searchFunc=function(){
+    const searchValue=search.value.toLowerCase().trim()
+    const studendFunc=function(name){
+        fetch(`https://restcountries.com/v3.1/name/${name}`).then((rp)=> {return rp.json()})
+        .then(([data])=>{
+            console.log(data)
+            const html=`<img class="student_flag" src="${data.flags.png}" alt="">
+            <h4 class="student_flag-name">${data.name.common}</h4>
+            <h4 class="student_number">Tələbə sayı:${data.population}</h4>`
+       studendBox.insertAdjacentHTML("beforeend",html)
+        })
+        
+    }
+    studendFunc(`${searchValue}`)
+}
 
 
 
 
+// const request = new XMLHttpRequest()
 
+// request.open("GET","https://restcountries.com/v3.1/all")
+// request.send()
 
-
-
-
-
-
-
-
-// const countries =function(){
-//     fetch("https://restcountries.com/v3.1/all").then((rp)=>{ return rp.json()}).then(([data])=>{
-//         const newData=data
-//     console.log(newData)
-//         // const html=`<div class="olkeler">${newData.flags.png}</div>`
-//         // countInfo.insertAdjacentHTML("beforeend",html)
-//     })
-    
-   
+// const searchFunc=function(){
+//     const [data]=JSON.parse(this.responseText)
+//     console.log(data);
+//     const html=`<img class="student_flag" src="${data.flags.png}" alt="">
+//              <h4 class="student_flag-name">${data.name.common}</h4>`
+//            studendBox.insertAdjacentHTML("beforeend",html)
 // }
 
-// countBtn.addEventListener("click",countries)
-//  countries(`Serbia`)
+// request.addEventListener('load',searchFunc)
 
-// const countries =function(){
-//     fetch("https://restcountries.com/v3.1/all").then((rp)=>{ return rp.json()}).then((data)=>{console.log(data)})
+
+formBtn.addEventListener("click",function(){
+    searchFunc()
     
-   
-// }
-// countries("Azerbaijan")
+})
+
